@@ -1,5 +1,5 @@
 ﻿import React, { useMemo } from 'react';
-import { NavLink, Link, Outlet, useNavigate } from 'react-router-dom';
+import { NavLink, Outlet } from 'react-router-dom';
 import { Icon } from '@mdi/react';
 import {
   mdiCalculatorVariant,
@@ -50,7 +50,6 @@ const THEME_LABEL: Record<ThemeMode, string> = {
 export default function TabLayout() {
   const c = useThemeColors();
   const s = useMemo(() => makeStyles(c), [c]);
-  const navigate = useNavigate();
   const dispatch = useAppDispatch();
   const theme = useAppSelector(st => st.settings.theme);
 

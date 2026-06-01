@@ -1,7 +1,6 @@
 import React, { useCallback, useMemo, useState } from 'react';
 import { Icon } from '@mdi/react';
 import {
-  mdiClose,
   mdiBackspaceOutline,
   mdiRuler,
   mdiWeightKilogram,

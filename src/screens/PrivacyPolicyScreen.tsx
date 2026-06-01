@@ -9,14 +9,13 @@ function Section({
   icon,
   title,
   children,
-  c,
   s,
 }: {
   id: string;
   icon: string;
   title: string;
   children: React.ReactNode;
-  c: ReturnType<typeof useThemeColors>;
+  c?: ReturnType<typeof useThemeColors>;
   s: Record<string, React.CSSProperties>;
 }) {
   return (
