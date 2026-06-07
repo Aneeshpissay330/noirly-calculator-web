@@ -2,7 +2,7 @@ import React, { useCallback, useMemo, useRef, useState } from 'react';
 import { Icon } from '@mdi/react';
 import { mdiBackspaceOutline, mdiClose, mdiMinus, mdiRestore, mdiHandBackLeft } from '@mdi/js';
 import { useThemeColors } from '../theme/ThemeContext';
-import type { Colors } from '../theme/colors';
+import { isDarkTheme, type Colors } from '../theme/colors';
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -164,7 +164,7 @@ function GraphCanvas({
   const c = useThemeColors();
   const divRef = useRef<HTMLDivElement>(null);
 
-  const isDark = c.background === '#0F0F11';
+  const isDark = isDarkTheme(c);
   const GRID_COLOR = isDark ? 'rgba(255,255,255,0.10)' : 'rgba(0,0,0,0.08)';
   const AXIS_COLOR = isDark ? 'rgba(255,255,255,0.45)' : 'rgba(0,0,0,0.35)';
 
@@ -219,7 +219,7 @@ function GraphCanvas({
                 const labelY = Math.max(14, Math.min(height - 4, axisY + 12));
                 els.push(
                   <text key={`vl${wx.toFixed(6)}`} x={sx + 3} y={labelY}
-                    fontSize={9} fontFamily="Manrope" fill={c.onSurface} opacity={0.5}>{fmtTick(wx)}</text>,
+                    fontSize={9} fontFamily="Geist Variable" fill={c.onSurface} opacity={0.5}>{fmtTick(wx)}</text>,
                 );
               }
             }
@@ -236,7 +236,7 @@ function GraphCanvas({
                 const labelX = Math.max(4, Math.min(width - 30, axisX + 3));
                 els.push(
                   <text key={`hl${wy.toFixed(6)}`} x={labelX} y={sy - 3}
-                    fontSize={9} fontFamily="Manrope" fill={c.onSurface} opacity={0.5}>{fmtTick(wy)}</text>,
+                    fontSize={9} fontFamily="Geist Variable" fill={c.onSurface} opacity={0.5}>{fmtTick(wy)}</text>,
                 );
               }
             }
@@ -244,9 +244,9 @@ function GraphCanvas({
           })()}
           {/* Axis labels */}
           <text x={width - 10} y={Math.max(14, Math.min(height - 4, axisY - 4))}
-            fontSize={11} fontFamily="Manrope" fill={AXIS_COLOR}>x</text>
+            fontSize={11} fontFamily="Geist Variable" fill={AXIS_COLOR}>x</text>
           <text x={Math.max(4, Math.min(width - 14, axisX + 4))} y={14}
-            fontSize={11} fontFamily="Manrope" fill={AXIS_COLOR}>y</text>
+            fontSize={11} fontFamily="Geist Variable" fill={AXIS_COLOR}>y</text>
           {/* Curves */}
           {curves.map((segs, ci) =>
             segs.map((seg, si) => (
@@ -264,7 +264,7 @@ function GraphCanvas({
         {exprs.filter(e => e.trim()).map((expr, i) => (
           <div key={i} style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', gap: 6, backgroundColor: 'rgba(0,0,0,0.50)', borderRadius: 12, paddingLeft: 10, paddingRight: 10, paddingTop: 5, paddingBottom: 5 }}>
             <div style={{ width: 8, height: 8, borderRadius: 4, backgroundColor: curveColors[i] ?? c.primary }} />
-            <span style={{ fontSize: 11, fontFamily: 'Manrope', fontWeight: 600, color: '#FFFFFF' }}>{formatLegend(expr, i)}</span>
+            <span style={{ fontSize: 11, fontFamily: 'Geist Variable, system-ui, sans-serif', fontWeight: 600, color: '#FFFFFF' }}>{formatLegend(expr, i)}</span>
           </div>
         ))}
       </div>
@@ -515,7 +515,7 @@ function makeStyles(c: Colors): Record<string, React.CSSProperties> {
     },
     zoomBtnLabel: {
       fontSize: 22,
-      fontFamily: 'Manrope',
+      fontFamily: 'Geist Variable, system-ui, sans-serif',
       fontWeight: 300,
       color: c.onSurface,
       lineHeight: '26px',
@@ -556,7 +556,7 @@ function makeStyles(c: Colors): Record<string, React.CSSProperties> {
     },
     eqLabel: {
       fontSize: 13,
-      fontFamily: 'Manrope',
+      fontFamily: 'Geist Variable, system-ui, sans-serif',
       fontWeight: 400,
       color: c.onSurfaceVariant,
       minWidth: 14,
@@ -564,7 +564,7 @@ function makeStyles(c: Colors): Record<string, React.CSSProperties> {
     eqInput: {
       flex: 1,
       fontSize: 26,
-      fontFamily: 'Manrope',
+      fontFamily: 'Geist Variable, system-ui, sans-serif',
       fontWeight: 400,
       color: c.onSurface,
       background: 'none',
@@ -610,7 +610,7 @@ function makeStyles(c: Colors): Record<string, React.CSSProperties> {
     },
     kbtnLabel: {
       fontSize: 22,
-      fontFamily: 'Manrope',
+      fontFamily: 'Geist Variable, system-ui, sans-serif',
       fontWeight: 500,
       color: c.onSurface,
       userSelect: 'none',

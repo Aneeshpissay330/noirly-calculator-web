@@ -102,7 +102,7 @@ function makeStyles(c: Colors): Record<string, React.CSSProperties> {
       padding: 4,
       cursor: 'pointer',
       fontSize: 14,
-      fontFamily: 'Manrope',
+      fontFamily: 'Geist Variable, system-ui, sans-serif',
       fontWeight: 500,
       color: c.error,
     },
@@ -116,7 +116,7 @@ function makeStyles(c: Colors): Record<string, React.CSSProperties> {
     },
     emptyText: {
       fontSize: 16,
-      fontFamily: 'Manrope',
+      fontFamily: 'Geist Variable, system-ui, sans-serif',
       fontWeight: 400,
       color: c.onSurfaceVariant,
     },
@@ -146,7 +146,7 @@ function makeStyles(c: Colors): Record<string, React.CSSProperties> {
     },
     expression: {
       fontSize: 14,
-      fontFamily: 'Manrope',
+      fontFamily: 'Geist Variable, system-ui, sans-serif',
       fontWeight: 400,
       color: c.onSurfaceVariant,
       marginBottom: 2,
@@ -156,13 +156,13 @@ function makeStyles(c: Colors): Record<string, React.CSSProperties> {
     },
     result: {
       fontSize: 22,
-      fontFamily: 'Manrope',
+      fontFamily: 'Geist Variable, system-ui, sans-serif',
       fontWeight: 500,
       color: c.onSurface,
     },
     timestamp: {
       fontSize: 12,
-      fontFamily: 'Manrope',
+      fontFamily: 'Geist Variable, system-ui, sans-serif',
       fontWeight: 400,
       color: c.outline,
       marginTop: 4,

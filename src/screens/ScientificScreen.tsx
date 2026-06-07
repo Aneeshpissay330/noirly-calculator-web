@@ -302,13 +302,13 @@ function makeStyles(c: Colors): Record<string, React.CSSProperties> {
     },
     expressionText: {
       fontSize: 24,
-      fontFamily: 'Manrope',
+      fontFamily: 'Geist Variable, system-ui, sans-serif',
       fontWeight: 300,
       color: c.onSurfaceVariant,
     },
     resultText: {
       fontSize: 64,
-      fontFamily: 'Manrope',
+      fontFamily: 'Geist Variable, system-ui, sans-serif',
       fontWeight: 200,
       color: c.primary,
       textAlign: 'right',
@@ -348,7 +348,7 @@ function makeStyles(c: Colors): Record<string, React.CSSProperties> {
     },
     funcChipText: {
       fontSize: 15,
-      fontFamily: 'Manrope',
+      fontFamily: 'Geist Variable, system-ui, sans-serif',
       fontWeight: 500,
       color: c.primary,
       userSelect: 'none',
@@ -386,7 +386,7 @@ function makeStyles(c: Colors): Record<string, React.CSSProperties> {
     keyClear: { backgroundColor: c.surfaceContainerHigh },
     keyLabel: {
       fontSize: 24,
-      fontFamily: 'Manrope',
+      fontFamily: 'Geist Variable, system-ui, sans-serif',
       fontWeight: 500,
       color: c.onSurface,
       userSelect: 'none',

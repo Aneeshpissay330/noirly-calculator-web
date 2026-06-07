@@ -203,7 +203,7 @@ function makeDropStyles(c: Colors): Record<string, React.CSSProperties> {
     },
     triggerBase: {
       fontSize: 12,
-      fontFamily: 'Manrope',
+      fontFamily: 'Geist Variable, system-ui, sans-serif',
       fontWeight: 600,
       color: c.primary,
       letterSpacing: '1.2px',
@@ -212,7 +212,7 @@ function makeDropStyles(c: Colors): Record<string, React.CSSProperties> {
     triggerValue: {
       flex: 1,
       fontSize: 15,
-      fontFamily: 'Manrope',
+      fontFamily: 'Geist Variable, system-ui, sans-serif',
       fontWeight: 500,
       color: c.onSurface,
       overflow: 'hidden',
@@ -259,7 +259,7 @@ function makeDropStyles(c: Colors): Record<string, React.CSSProperties> {
     },
     optionBase: {
       fontSize: 12,
-      fontFamily: 'Manrope',
+      fontFamily: 'Geist Variable, system-ui, sans-serif',
       fontWeight: 600,
       color: c.onSurfaceVariant,
       letterSpacing: '1.2px',
@@ -271,7 +271,7 @@ function makeDropStyles(c: Colors): Record<string, React.CSSProperties> {
     optionValue: {
       flex: 1,
       fontSize: 16,
-      fontFamily: 'Manrope',
+      fontFamily: 'Geist Variable, system-ui, sans-serif',
       fontWeight: 500,
       color: c.onSurfaceVariant,
       overflow: 'hidden',
@@ -543,14 +543,14 @@ function makeStyles(c: Colors): Record<string, React.CSSProperties> {
     },
     bitWidthLabel: {
       fontSize: 11,
-      fontFamily: 'Manrope',
+      fontFamily: 'Geist Variable, system-ui, sans-serif',
       fontWeight: 600,
       color: c.primary,
       letterSpacing: '1.8px',
     },
     exprLine: {
       fontSize: 18,
-      fontFamily: 'Manrope',
+      fontFamily: 'Geist Variable, system-ui, sans-serif',
       fontWeight: 300,
       color: c.onSurfaceVariant,
       textAlign: 'right',
@@ -561,7 +561,7 @@ function makeStyles(c: Colors): Record<string, React.CSSProperties> {
     },
     largeDisplay: {
       fontSize: 72,
-      fontFamily: 'Manrope',
+      fontFamily: 'Geist Variable, system-ui, sans-serif',
       fontWeight: 200,
       color: c.onSurface,
       textAlign: 'right',
@@ -628,7 +628,7 @@ function makeStyles(c: Colors): Record<string, React.CSSProperties> {
     keyDisabled: { backgroundColor: c.surfaceContainerLow, opacity: 0.45 },
     keyLabel: {
       fontSize: 20,
-      fontFamily: 'Manrope',
+      fontFamily: 'Geist Variable, system-ui, sans-serif',
       fontWeight: 500,
       color: c.onSurface,
       userSelect: 'none',

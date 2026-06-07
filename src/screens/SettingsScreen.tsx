@@ -70,7 +70,7 @@ function makeStyles(c: Colors): Record<string, React.CSSProperties> {
     },
     sectionLabel: {
       fontSize: 11,
-      fontFamily: 'Manrope',
+      fontFamily: 'Geist Variable, system-ui, sans-serif',
       fontWeight: 600,
       color: c.onSurfaceVariant,
       letterSpacing: '1.4px',
@@ -112,7 +112,7 @@ function makeStyles(c: Colors): Record<string, React.CSSProperties> {
     cardRowLabel: {
       flex: 1,
       fontSize: 16,
-      fontFamily: 'Manrope',
+      fontFamily: 'Geist Variable, system-ui, sans-serif',
       fontWeight: 500,
       color: c.onSurface,
     },
@@ -141,7 +141,7 @@ function makeStyles(c: Colors): Record<string, React.CSSProperties> {
     },
     segmentText: {
       fontSize: 14,
-      fontFamily: 'Manrope',
+      fontFamily: 'Geist Variable, system-ui, sans-serif',
       fontWeight: 600,
       color: c.onSurfaceVariant,
       userSelect: 'none',

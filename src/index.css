@@ -1,32 +1,180 @@
-﻿@import '@fontsource/manrope/200.css';
-@import '@fontsource/manrope/300.css';
-@import '@fontsource/manrope/400.css';
-@import '@fontsource/manrope/500.css';
-@import '@fontsource/manrope/600.css';
-@import '@fontsource/manrope/700.css';
+﻿@import 'tailwindcss';
+@import '@fontsource-variable/geist';
+@import '@fontsource/jetbrains-mono/400.css';
+@import '@fontsource/jetbrains-mono/500.css';
 
-*, *::before, *::after {
-  box-sizing: border-box;
+:root {
+  --font-geist-sans: 'Geist Variable', system-ui, sans-serif;
+  --font-jetbrains-mono: 'JetBrains Mono', ui-monospace, monospace;
 }
 
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  overflow: hidden;
-  background-color: #080809;
-  font-family: 'Manrope', sans-serif;
+/* Tailwind tokens → runtime theme variables (set on html.dark / html.light) */
+@theme inline {
+  --color-background: var(--theme-background);
+  --color-surface: var(--theme-background);
+  --color-surface-dim: var(--theme-surface-dim);
+  --color-surface-container: var(--theme-surface);
+  --color-surface-container-low: var(--theme-surface);
+  --color-surface-container-high: var(--theme-surface-high);
+  --color-surface-container-highest: var(--theme-surface-high);
+  --color-surface-container-lowest: var(--theme-background);
+  --color-surface-bright: var(--theme-surface-high);
+  --color-surface-variant: var(--theme-surface-high);
+  --color-on-background: var(--theme-on-surface);
+  --color-on-surface: var(--theme-on-surface);
+  --color-on-surface-variant: var(--theme-on-surface-variant);
+  --color-primary: var(--theme-primary);
+  --color-on-primary: var(--theme-on-primary);
+  --color-primary-container: var(--theme-primary);
+  --color-on-primary-container: var(--theme-on-primary);
+  --color-outline: var(--theme-outline);
+  --color-outline-variant: var(--theme-outline-variant);
+  --color-tertiary: var(--theme-tertiary);
+  --color-secondary: var(--theme-on-surface-variant);
+  --color-on-secondary-container: var(--theme-on-surface-variant);
+  --color-secondary-container: var(--theme-surface-high);
+  --color-inverse-surface: var(--theme-on-surface);
+  --color-error: #ef4444;
+
+  --font-display: var(--font-geist-sans);
+  --font-display-mobile: var(--font-geist-sans);
+  --font-code-md: var(--font-jetbrains-mono);
+  --font-body-lg: var(--font-geist-sans);
+  --font-headline-sm: var(--font-geist-sans);
+  --font-headline-md: var(--font-geist-sans);
+  --font-body-md: var(--font-geist-sans);
+  --font-label-sm: var(--font-jetbrains-mono);
+
+  --font-size-display: 2rem;
+  --font-size-display--line-height: 2.5rem;
+  --font-size-display--letter-spacing: -0.02em;
+  --font-size-display--font-weight: 600;
+  --font-size-display-mobile: 1.5rem;
+  --font-size-display-mobile--line-height: 2rem;
+  --font-size-display-mobile--font-weight: 600;
+  --font-size-code-md: 0.875rem;
+  --font-size-code-md--line-height: 1.25rem;
+  --font-size-code-md--font-weight: 400;
+  --font-size-body-lg: 1rem;
+  --font-size-body-lg--line-height: 1.5rem;
+  --font-size-body-lg--font-weight: 400;
+  --font-size-headline-sm: 1.125rem;
+  --font-size-headline-sm--line-height: 1.75rem;
+  --font-size-headline-sm--font-weight: 500;
+  --font-size-headline-md: 1.5rem;
+  --font-size-headline-md--line-height: 2rem;
+  --font-size-headline-md--letter-spacing: -0.01em;
+  --font-size-headline-md--font-weight: 600;
+  --font-size-body-md: 0.875rem;
+  --font-size-body-md--line-height: 1.25rem;
+  --font-size-body-md--font-weight: 400;
+  --font-size-label-sm: 0.75rem;
+  --font-size-label-sm--line-height: 1rem;
+  --font-size-label-sm--letter-spacing: 0.02em;
+  --font-size-label-sm--font-weight: 500;
+
+  --spacing-container-padding: 1.5rem;
+  --spacing-max-width: 90rem;
+  --spacing-density-medium: 1rem;
+  --spacing-gutter: 1rem;
+  --spacing-unit: 0.25rem;
+  --spacing-density-high: 0.5rem;
+
+  --radius-DEFAULT: 0.25rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-full: 9999px;
 }
 
-#root {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
+/* Dark theme — #0B0F19 / #111827 / #38BDF8 */
+html.dark {
+  --theme-background: #0b0f19;
+  --theme-surface: #111827;
+  --theme-surface-high: #1f2937;
+  --theme-surface-dim: #0b0f19;
+  --theme-primary: #38bdf8;
+  --theme-on-surface: #f1f5f9;
+  --theme-on-surface-variant: #94a3b8;
+  --theme-outline: #475569;
+  --theme-outline-variant: #334155;
+  --theme-tertiary: #fbbf24;
+  --theme-on-primary: #0b0f19;
+  --theme-glass-bg: rgba(17, 24, 39, 0.75);
+  --theme-glass-border: rgba(255, 255, 255, 0.1);
+  --theme-scrollbar-track: #0b0f19;
+  --theme-scrollbar-thumb: rgba(255, 255, 255, 0.15);
+  --theme-accent-muted: rgba(56, 189, 248, 0.12);
+  --theme-accent-border: rgba(56, 189, 248, 0.35);
 }
 
-button {
-  font-family: 'Manrope', sans-serif;
-  -webkit-tap-highlight-color: transparent;
+/* Light theme — #FFFFFF / #F8FAFC / #0284C7 */
+html.light {
+  --theme-background: #ffffff;
+  --theme-surface: #f8fafc;
+  --theme-surface-high: #f1f5f9;
+  --theme-surface-dim: #ffffff;
+  --theme-primary: #0284c7;
+  --theme-on-surface: #0f172a;
+  --theme-on-surface-variant: #64748b;
+  --theme-outline: #cbd5e1;
+  --theme-outline-variant: #e2e8f0;
+  --theme-tertiary: #ea580c;
+  --theme-on-primary: #ffffff;
+  --theme-glass-bg: rgba(255, 255, 255, 0.9);
+  --theme-glass-border: rgba(0, 0, 0, 0.08);
+  --theme-scrollbar-track: #f1f5f9;
+  --theme-scrollbar-thumb: rgba(0, 0, 0, 0.15);
+  --theme-accent-muted: rgba(2, 132, 199, 0.08);
+  --theme-accent-border: rgba(2, 132, 199, 0.3);
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+.app-main {
+  margin-left: 0;
+  min-height: 100vh;
+  background-color: var(--theme-background);
+}
+
+@media (min-width: 1024px) {
+  .app-main {
+    margin-left: 240px;
+  }
+}
+
+.glass-card {
+  background: var(--theme-glass-bg);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--theme-glass-border);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.glass-card:hover {
+  border-color: var(--theme-accent-border);
+  box-shadow: 0 4px 20px var(--theme-accent-muted);
+}
+
+.glass-panel {
+  background: var(--theme-glass-bg);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--theme-glass-border);
+}
+
+.accent-card {
+  background: var(--theme-accent-muted);
+  border: 1px solid var(--theme-accent-border);
+  cursor: pointer;
+}
+
+button:not(:disabled) {
+  cursor: pointer;
+}
+
+.glow-primary {
+  box-shadow: 0 4px 16px var(--theme-accent-muted);
 }
 
 ::-webkit-scrollbar {
@@ -35,10 +183,45 @@ button {
 }
 
 ::-webkit-scrollbar-track {
-  background: transparent;
+  background: var(--theme-scrollbar-track);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgba(128, 128, 128, 0.3);
-  border-radius: 2px;
+  background: var(--theme-scrollbar-thumb);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--theme-primary);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+body {
+  background: var(--theme-background);
+  color: var(--theme-on-surface);
+  font-family: var(--font-geist-sans);
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100%;
+}
+
+button {
+  font-family: var(--font-geist-sans);
+  -webkit-tap-highlight-color: transparent;
+}
+
+html.light .rounded-xl,
+html.light .rounded-2xl {
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.06);
 }

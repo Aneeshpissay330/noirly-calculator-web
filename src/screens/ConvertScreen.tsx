@@ -220,7 +220,7 @@ function makePickerStyles(c: Colors): Record<string, React.CSSProperties> {
     },
     title: {
       fontSize: 15,
-      fontFamily: 'Manrope',
+      fontFamily: 'Geist Variable, system-ui, sans-serif',
       fontWeight: 600,
       color: c.onSurface,
       paddingLeft: 24,
@@ -263,14 +263,14 @@ function makePickerStyles(c: Colors): Record<string, React.CSSProperties> {
     itemActive: { backgroundColor: c.surfaceContainerHigh },
     itemLabel: {
       fontSize: 16,
-      fontFamily: 'Manrope',
+      fontFamily: 'Geist Variable, system-ui, sans-serif',
       fontWeight: 400,
       color: c.onSurfaceVariant,
     },
     itemLabelActive: { fontWeight: 600, color: c.primary },
     itemAbbr: {
       fontSize: 14,
-      fontFamily: 'Manrope',
+      fontFamily: 'Geist Variable, system-ui, sans-serif',
       fontWeight: 500,
       color: c.outline,
     },
@@ -502,7 +502,7 @@ function makeStyles(c: Colors): Record<string, React.CSSProperties> {
       left: 16,
       right: 16,
       fontSize: 88,
-      fontFamily: 'Manrope',
+      fontFamily: 'Geist Variable, system-ui, sans-serif',
       fontWeight: 200,
       color: c.onSurface,
       opacity: 0.06,
@@ -513,7 +513,7 @@ function makeStyles(c: Colors): Record<string, React.CSSProperties> {
     },
     inputText: {
       fontSize: 38,
-      fontFamily: 'Manrope',
+      fontFamily: 'Geist Variable, system-ui, sans-serif',
       fontWeight: 200,
       color: c.onSurface,
       textAlign: 'right',
@@ -523,7 +523,7 @@ function makeStyles(c: Colors): Record<string, React.CSSProperties> {
     },
     unitAbbr: {
       fontSize: 13,
-      fontFamily: 'Manrope',
+      fontFamily: 'Geist Variable, system-ui, sans-serif',
       fontWeight: 500,
       color: c.onSurfaceVariant,
       textAlign: 'right',
@@ -542,7 +542,7 @@ function makeStyles(c: Colors): Record<string, React.CSSProperties> {
     },
     categoryLabel: {
       fontSize: 14,
-      fontFamily: 'Manrope',
+      fontFamily: 'Geist Variable, system-ui, sans-serif',
       fontWeight: 400,
       color: c.onSurfaceVariant,
     },
@@ -571,7 +571,7 @@ function makeStyles(c: Colors): Record<string, React.CSSProperties> {
     },
     categoryPillText: {
       fontSize: 14,
-      fontFamily: 'Manrope',
+      fontFamily: 'Geist Variable, system-ui, sans-serif',
       fontWeight: 600,
       color: c.onSurface,
       userSelect: 'none',
@@ -589,7 +589,7 @@ function makeStyles(c: Colors): Record<string, React.CSSProperties> {
     },
     unitRowLabel: {
       fontSize: 14,
-      fontFamily: 'Manrope',
+      fontFamily: 'Geist Variable, system-ui, sans-serif',
       fontWeight: 400,
       color: c.onSurfaceVariant,
     },
@@ -609,7 +609,7 @@ function makeStyles(c: Colors): Record<string, React.CSSProperties> {
     },
     unitPillText: {
       fontSize: 14,
-      fontFamily: 'Manrope',
+      fontFamily: 'Geist Variable, system-ui, sans-serif',
       fontWeight: 600,
       color: c.onSurface,
       userSelect: 'none',
@@ -654,7 +654,7 @@ function makeStyles(c: Colors): Record<string, React.CSSProperties> {
     resultValue: {
       flex: 1,
       fontSize: 22,
-      fontFamily: 'Manrope',
+      fontFamily: 'Geist Variable, system-ui, sans-serif',
       fontWeight: 300,
       color: c.primary,
       textAlign: 'right',
@@ -664,7 +664,7 @@ function makeStyles(c: Colors): Record<string, React.CSSProperties> {
     },
     resultAbbr: {
       fontSize: 13,
-      fontFamily: 'Manrope',
+      fontFamily: 'Geist Variable, system-ui, sans-serif',
       fontWeight: 500,
       color: c.onSurfaceVariant,
     },
@@ -709,7 +709,7 @@ function makeStyles(c: Colors): Record<string, React.CSSProperties> {
     },
     numKeyLabel: {
       fontSize: 22,
-      fontFamily: 'Manrope',
+      fontFamily: 'Geist Variable, system-ui, sans-serif',
       fontWeight: 500,
       color: c.onSurface,
       userSelect: 'none',
@@ -720,7 +720,7 @@ function makeStyles(c: Colors): Record<string, React.CSSProperties> {
     },
     numKeyLabelConfirm: {
       fontSize: 28,
-      fontFamily: 'Manrope',
+      fontFamily: 'Geist Variable, system-ui, sans-serif',
       fontWeight: 500,
       color: c.onPrimaryContainer,
       userSelect: 'none',

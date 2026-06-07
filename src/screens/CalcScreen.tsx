@@ -278,13 +278,13 @@ function makeStyles(c: Colors): Record<string, React.CSSProperties> {
     },
     expressionText: {
       fontSize: 24,
-      fontFamily: 'Manrope',
+      fontFamily: 'Geist Variable, system-ui, sans-serif',
       fontWeight: 300,
       color: c.onSurfaceVariant,
     },
     resultText: {
       fontSize: 72,
-      fontFamily: 'Manrope',
+      fontFamily: 'Geist Variable, system-ui, sans-serif',
       fontWeight: 200,
       color: c.onSurface,
       textAlign: 'right',
@@ -341,7 +341,7 @@ function makeStyles(c: Colors): Record<string, React.CSSProperties> {
     },
     keyLabel: {
       fontSize: 28,
-      fontFamily: 'Manrope',
+      fontFamily: 'Geist Variable, system-ui, sans-serif',
       fontWeight: 500,
       color: c.onSurface,
       pointerEvents: 'none',
